@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Matching Game</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      width: 100px;
+      height: 100px;
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Memory Matching Game</h1>
+
+  <div id="game-board"></div>
+
+  <button onclick="startGame()">Start New Game</button>
+
+  <script>
+    const images = ['🍎', '🍌', '🍒', '🍇', '🍍', '🍓', '🍑', '🍊', '🍉', '🍋', '🍈', '🥭'];
+    let gameBoard = [];
+
+    function startGame() {
+      // Create pairs of images and shuffle the array
+      const shuffledImages = [...images, ...images].sort(() => Math.random() - 0.5);
+
+      // Build the game board
+      gameBoard = shuffledImages.map((image, index) => ({
+        id: index,
+        image: image,
+        flipped: false,
+        matched: false,
+      }));
+
+      // Render the game board
+      renderGameBoard();
+    }
+
+    function renderGameBoard() {
+      const gameBoardElement = document.getElementById('game-board');
+      gameBoardElement.innerHTML = '';
+
+      gameBoard.forEach(card => {
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card');
+        cardElement.textContent = card.flipped || card.matched ? card.image : '';
+        cardElement.addEventListener('click', () => flipCard(card));
+        gameBoardElement.appendChild(cardElement);
+      });
+    }
+
+    function flipCard(card) {
+      if (!card.flipped && !card.matched) {
+        card.flipped = true;
+        renderGameBoard();
+        checkMatch();
+      }
+    }
+
+    function checkMatch() {
+      const flippedCards = gameBoard.filter(card => card.flipped && !card.matched);
+
+      if (flippedCards.length === 2) {
+        if (flippedCards[0].image === flippedCards[1].image) {
+          // Match found
+          flippedCards.forEach(card => card.matched = true);
+        } else {
+          // No match, flip back
+          setTimeout(() => {
+            flippedCards.forEach(card => card.flipped = false);
+            renderGameBoard();
+          }, 1000);
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
