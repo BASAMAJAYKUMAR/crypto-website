@@ -1,10 +1,4 @@
-'use strict';
 
-
-
-/**
- * add event on element
- */
 
 const addEventOnElem = function (elem, type, callback) {
   if (elem.length > 1) {
@@ -18,9 +12,6 @@ const addEventOnElem = function (elem, type, callback) {
 
 
 
-/**
- * navbar toggle
- */
 
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
@@ -36,9 +27,7 @@ addEventOnElem(navTogglers, "click", toggleNavbar);
 
 
 
-/**
- * active header when window scroll down to 100px
- */
+
 
 const header = document.querySelector("[data-header]");
 
