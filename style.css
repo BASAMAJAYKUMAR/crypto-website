@@ -5,9 +5,7 @@
 
 :root {
 
-  /**
-   * colors
-   */
+ 
 
   --ultramarine-blue: hsl(222, 100%, 55%);
   --silver-metallic: hsl(240, 4%, 71%);
@@ -26,9 +24,6 @@
   --onyx-1: hsl(0, 0%, 23%);
   --onyx-2: hsl(0, 0%, 20%);
 
-  /**
-   * typography
-   */
 
   --ff-poppins: 'Poppins', sans-serif;
   --ff-open-sans: 'Open Sans', sans-serif;
@@ -49,31 +44,21 @@
   --fw-700: 700;
   --fw-800: 800;
 
-  /**
-   * spacing
-   */
-
+  
   --section-padding: 120px;
 
-  /**
-   * shadow
-   */
+
 
   --shadow: 0 10px 30px hsla(0, 0%, 0%, 0.1);
 
-  /**
-   * radius
-   */
-
+ 
   --radius-pill: 500px;
   --radius-circle: 50%;
   --radius-5: 5px;
   --radius-8: 8px;
   --radius-16: 16px;
 
-  /**
-   * transition
-   */
+ 
 
   --transition: 0.25s ease;
   --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
@@ -85,9 +70,6 @@
 
 
 
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
 
 *,
 *::before,
@@ -154,11 +136,6 @@ body.active { overflow-y: hidden; }
 
 
 
-
-
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
 
 .container { padding-inline: 15px; }
 
@@ -238,9 +215,6 @@ body.active { overflow-y: hidden; }
 
 
 
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
 
 .header .btn-group { display: none; }
 
@@ -339,12 +313,6 @@ body.active { overflow-y: hidden; }
 
 
 
-
-
-/*-----------------------------------*\
-  #HERO
-\*-----------------------------------*/
-
 .hero { padding-block-start: calc(var(--section-padding) + 50px); }
 
 .hero .container {
@@ -393,9 +361,6 @@ body.active { overflow-y: hidden; }
 
 
 
-/*-----------------------------------*\
-  #PROMO
-\*-----------------------------------*/
 
 .promo .section-text {
   padding-inline: 8px;
@@ -428,10 +393,6 @@ body.active { overflow-y: hidden; }
 
 
 
-/*-----------------------------------*\
-  #STATS
-\*-----------------------------------*/
-
 .stats .container {
   display: grid;
   gap: 50px;
@@ -463,9 +424,6 @@ body.active { overflow-y: hidden; }
 
 
 
-/*-----------------------------------*\
-  #MARKET
-\*-----------------------------------*/
 
 .market .section-text { margin-block-end: 24px; }
 
@@ -538,9 +496,6 @@ body.active { overflow-y: hidden; }
 
 
 
-/*-----------------------------------*\
-  #CTA
-\*-----------------------------------*/
 
 .cta .btn-primary {
   display: flex;
@@ -555,9 +510,6 @@ body.active { overflow-y: hidden; }
 
 
 
-/*-----------------------------------*\
-  #INSTRUCTION
-\*-----------------------------------*/
 
 .instruction .section-text { margin-block-end: 50px; }
 
@@ -580,9 +532,6 @@ body.active { overflow-y: hidden; }
 
 
 
-/*-----------------------------------*\
-  #APP
-\*-----------------------------------*/
 
 .app-card {
   padding: 25px;
@@ -618,10 +567,6 @@ body.active { overflow-y: hidden; }
 
 
 
-
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
 
 .footer {
   text-align: center;
@@ -696,19 +641,9 @@ body.active { overflow-y: hidden; }
 
 
 
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
 
-/**
- * responsive for large than 575px screen
- */
 
 @media (min-width: 575px) {
-
-  /**
-   * REUSED STYLE
-   */
 
   .container {
     max-width: 540px;
@@ -718,9 +653,6 @@ body.active { overflow-y: hidden; }
 
 
 
-  /**
-   * APP
-   */
 
   .app-card .card-banner {
     max-width: max-content;
@@ -733,15 +665,10 @@ body.active { overflow-y: hidden; }
 
 
 
-/**
- * responsive for large than 768px screen
- */
 
 @media (min-width: 768px) {
 
-  /**
-   * REUSED STYLE
-   */
+
 
   .container { max-width: 720px; }
 
@@ -749,9 +676,7 @@ body.active { overflow-y: hidden; }
 
 
 
-  /**
-   * HEADER
-   */
+  
 
   .header .btn-group {
     display: flex;
@@ -770,9 +695,6 @@ body.active { overflow-y: hidden; }
 
 
 
-  /**
-   * STATS
-   */
 
   .stats-list {
     grid-template-columns: repeat(3, 1fr);
@@ -780,18 +702,12 @@ body.active { overflow-y: hidden; }
   }
 
 
-  /**
-   * APP
-   */
 
   .app-card { padding: 50px; }
 
 
 
-  /**
-   * FOOTER
-   */
-
+  
   .footer-bottom { padding-block: 26px; }
 
   .footer-bottom .container {
@@ -808,15 +724,8 @@ body.active { overflow-y: hidden; }
 
 
 
-/**
- * responsive for large than 992px screen
- */
-
 @media (min-width: 992px) {
 
-  /**
-   * REUSED STYLE
-   */
 
   .container { max-width: 960px; }
 
@@ -830,9 +739,7 @@ body.active { overflow-y: hidden; }
 
 
 
-  /**
-   * HERO
-   */
+ 
 
   .hero .container {
     grid-template-columns: 0.8fr 1fr;
@@ -842,9 +749,7 @@ body.active { overflow-y: hidden; }
 
 
 
-  /**
-   * STATS
-   */
+
 
   .stats .container {
     grid-template-columns: 1fr 1fr;
@@ -853,17 +758,12 @@ body.active { overflow-y: hidden; }
 
 
 
-  /**
-   * INSTRUCTION
-   */
+ 
 
   .instruction .grid-list { grid-template-columns: repeat(4, 1fr); }
 
 
 
-  /**
-   * APP
-   */
 
   .app-card {
     grid-template-columns: 1fr 1fr;
@@ -872,9 +772,7 @@ body.active { overflow-y: hidden; }
 
 
 
-  /**
-   * FOOTER
-   */
+ 
 
   .footer-top .container { max-width: 580px; }
 
@@ -886,23 +784,16 @@ body.active { overflow-y: hidden; }
 
 
 
-/**
- * responsive for large than 1200px screen
- */
+
 
 @media (min-width: 1200px) {
 
-  /**
-   * REUSED STYLE
-   */
-
+ 
   .container { max-width: 1140px; }
 
 
 
-  /**
-   * HEADER
-   */
+
 
   .nav-open-btn,
   .navbar-top { display: none; }
@@ -921,9 +812,7 @@ body.active { overflow-y: hidden; }
 
 
 
-  /**
-   * APP
-   */
+  
 
   .app-card { padding-inline: 80px; }
 
